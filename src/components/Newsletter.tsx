@@ -1,56 +1,50 @@
-import React, { useRef, useState } from 'react';
+import { useState } from "react";
+import axios from "axios";
 
-export default function Newsletter() {
-  // 1. Create a reference to the input so we can fetch/clear it's value.
-  const inputEl = useRef(null);
-  // 2. Hold a message in state to handle the response from our API.
-  const [message, setMessage] = useState('');
+export default () => {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState("IDLE");
+  const [errorMessage, setErrorMessage] = useState(null);
 
-  const subscribe = async (e) => {
-    e.preventDefault();
-
-    // 3. Send a request to our API with the user's email address.
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputEl.current.value
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST'
-    });
-
-    const { error } = await res.json();
-
-    if (error) {
-      // 4. If there was an error, update the message in state.
-      setMessage(error);
-
-      return;
+  const subscribe = async () => {
+    setState("LOADING");
+    setErrorMessage(null);
+    try {
+      const response = await axios.post("/api/newsletter", { email });
+      setState("SUCCESS");
+    } catch (e) {
+      setErrorMessage(e.response.data.error);
+      setState("ERROR");
     }
-
-    // 5. Clear the input value and show a success message.
-    inputEl.current.value = '';
-    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
   };
 
   return (
-    <form onSubmit={subscribe}>
-      <label htmlFor="email-input">{'Email Address'}</label>
-      <input
-        id="email-input"
-        name="email"
-        placeholder="you@awesome.com"
-        ref={inputEl}
-        required
-        type="email"
-      />
-      <div>
-        {message
-          ? message
-          : `I'll only send emails when new content is posted. No spam.`}
+    <div className="flex flex-col items-center w-full p-8 border-gray-500 border-solid border rounded-sm mt-8">
+      <div className="flex w-1/2 lg:w-2/3 justify-center mt-5 flex-col lg:flex-row">
+        <input
+          className="appearance-none mb-2 lg:mb-0 w-full lg:w-2/3 border border-gray-500 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-gray-600"
+          type="text"
+          placeholder="Enter Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button
+          className={`lg:ml-2 w-full lg:w-1/3 shadow bg-brand2 focus:shadow-outline focus:outline-none text-center text-white font-bold py-2 px-4 rounded flex ${
+            state === "LOADING" ? "button-gradient-loading" : ""
+          }`}
+          type="button"
+          disabled={state === "LOADING"}
+          onClick={subscribe}
+        >
+          Subscribe
+        </button>
       </div>
-      <button type="submit">{'✨ Subscribe 💌'}</button>
-    </form>
+      {state === "ERROR" && (
+        <p className="w-1/2 mt-2 text-red-600">{errorMessage}</p>
+      )}
+      {state === "SUCCESS" && (
+        <p className="w-1/2 mt-2 text-green-600">Success!</p>
+      )}
+    </div>
   );
-}
+};
