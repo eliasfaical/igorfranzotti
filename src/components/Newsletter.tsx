@@ -20,18 +20,14 @@ export default () => {
 
   return (
     <div className="flex flex-col items-center w-full p-8 border-gray-500 border-solid border rounded-sm mt-8">
-      <div className="flex w-1/2 lg:w-2/3 justify-center mt-5 flex-col lg:flex-row">
+      <div>
         <input
-          className="appearance-none mb-2 lg:mb-0 w-full lg:w-2/3 border border-gray-500 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-gray-600"
           type="text"
           placeholder="Enter Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <button
-          className={`lg:ml-2 w-full lg:w-1/3 shadow bg-brand2 focus:shadow-outline focus:outline-none text-center text-white font-bold py-2 px-4 rounded flex ${
-            state === "LOADING" ? "button-gradient-loading" : ""
-          }`}
           type="button"
           disabled={state === "LOADING"}
           onClick={subscribe}

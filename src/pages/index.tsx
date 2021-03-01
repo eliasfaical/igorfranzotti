@@ -58,11 +58,11 @@ export default function Home() {
               className={styles.button}
               onClick={handlePress}
             >
-                Enviar
-              </button>
+              Enviar
+            </button>
           </form>
 
-          <Newsletter />
+          {/* <Newsletter /> */}
 
           <p>
             Preencha os dados corretamente. <br />
