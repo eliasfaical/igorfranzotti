@@ -62,7 +62,7 @@ export default function Home() {
             </button>
           </form>
 
-          {/* <Newsletter /> */}
+          <Newsletter />
 
           <p>
             Preencha os dados corretamente. <br />

@@ -1,46 +1,66 @@
-import { useState } from "react";
-import axios from "axios";
+import React, { createRef } from 'react';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
-export default () => {
-  const [email, setEmail] = useState("");
-  const [state, setState] = useState("IDLE");
-  const [errorMessage, setErrorMessage] = useState(null);
 
-  const subscribe = async () => {
-    setState("LOADING");
-    setErrorMessage(null);
-    try {
-      const response = await axios.post("/api/newsletter", { email });
-      setState("SUCCESS");
-    } catch (e) {
-      setErrorMessage(e.response.data.error);
-      setState("ERROR");
-    }
-  };
+const url =
+  'https://eliasfaical.us1.list-manage.com/subscribe?u=eada3bbba6477790131eb87d6&id=5823c3a3b6'
+
+const Newsletter = () => {
+  const emailRef = createRef<HTMLInputElement>()
 
   return (
-    <div className="flex flex-col items-center w-full p-8 border-gray-500 border-solid border rounded-sm mt-8">
-      <div>
-        <input
-          type="text"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button
-          type="button"
-          disabled={state === "LOADING"}
-          onClick={subscribe}
-        >
-          Subscribe
-        </button>
-      </div>
-      {state === "ERROR" && (
-        <p className="w-1/2 mt-2 text-red-600">{errorMessage}</p>
-      )}
-      {state === "SUCCESS" && (
-        <p className="w-1/2 mt-2 text-green-600">Success!</p>
-      )}
+    <div>
+      <p>Deseja receber um aviso quando lançar?</p>
+      <MailchimpSubscribe
+        url={url}
+        render={({ subscribe, status }) => {
+          switch (status) {
+            case 'sending':
+              return <p>Enviando...</p>
+            case 'success':
+              return (
+                <p>
+                  ✔️ Quer concorrer a esse curso de graça? Compartilhe com seus
+                  amigos!
+                </p>
+              )
+            case 'error':
+              return (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: `❌ Ops, algum erro aconteceu...`
+                  }}
+                />
+              )
+            default:
+              return (
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault()
+
+                    subscribe({
+                      EMAIL: emailRef.current.value
+                    })
+                  }}
+                >
+                  <div>
+                    <label htmlFor="email">E-mail:</label>
+                    <input
+                      id="email"
+                      type="email"
+                      ref={emailRef}
+                      required
+                      placeholder="quero@evoluir.dev"
+                    />
+                  </div>
+                  <button type="submit">Me avise!</button>
+                </form>
+              )
+          }
+        }}
+      />
     </div>
-  );
-};
+  )
+}
+
+export default Newsletter
