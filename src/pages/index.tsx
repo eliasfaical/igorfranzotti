@@ -1,28 +1,10 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React from 'react';
 import Newsletter from '../components/Newsletter';
 
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const [state, setState] = useState({ name: '', email: '' });
-  
-  const handleChange = event => {
-    const { name, value } = event.target;
-    setState({
-      ...state,
-      [name]: value
-    });
-  }
-  
-  const handlePress = () => {
-    fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: state.name, email: state.email })
-    });
-  }
-
   return (
     <>
       <Head>
