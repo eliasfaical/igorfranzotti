@@ -35,41 +35,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <div className={styles.containerFooter}>
-          <h2>Baixe grátis seu e-book</h2>
-          
-          <form className={styles.formEbook}>
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Nome completo" 
-              className={styles.inputForm} 
-              onChange={handleChange}
-            />
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="E-mail" 
-              className={styles.inputForm} 
-              onChange={handleChange}
-            />
-            <button 
-              type="button" 
-              className={styles.button}
-              onClick={handlePress}
-            >
-              Enviar
-            </button>
-          </form>
-
-          <Newsletter />
-
-          <p>
-            Preencha os dados corretamente. <br />
-            Você receberá seu E-book “Fundamentos da Aquarela” <br />
-            direto em sua caixa de e-mail.
-          </p>
-        </div>
+        <Newsletter />
 
         <div className={styles.rodape}>
           <p>© Igor Franzotti - Todos os direitos resevados</p>
