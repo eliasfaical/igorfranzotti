@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useState } from 'react';
 import Newsletter from '../components/Newsletter';
 
@@ -24,9 +25,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Igor Franzotti - Aquarelista</title>
+      </Head>
+
       <header className={styles.header}>
         <h1>
-          <img src="/igor-franzzoti.svg" alt="Igor Franzotti - Aquarelista"/>
+          <img src="/igor.png" alt="Igor Franzotti - Aquarelista"/>
         </h1>
       </header>
 
