@@ -25,7 +25,7 @@ export default function Home() {
         <Newsletter />
 
         <div className={styles.rodape}>
-          <p>© Igor Franzotti - Todos os direitos resevados</p>
+          <p>© Igor Franzotti - Todos os direitos reservados</p>
         </div>
       </footer>
     </>
