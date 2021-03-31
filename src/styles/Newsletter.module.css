@@ -1,9 +1,11 @@
 .containerNewsletter {
   padding: 3rem 1rem;
+  margin-bottom: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--gray-line);
 }
 
 .containerNewsletter h2 {

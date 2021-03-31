@@ -10,7 +10,7 @@
 :root {
   --white: #fff;
   --background: #49433B;
-  --gray-line: #D3C397;
+  --gray-line: #e8dec4;
   --text: #49433B;
   --blue: #72A7C1;
   --orange: #EA6206;
@@ -39,6 +39,7 @@ body {
   background-color: var(--white);
   color: var(--text);
   font: 400 1rem "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 ol, ul {
 	list-style: none;

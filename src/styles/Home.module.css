@@ -3,7 +3,9 @@
   height: auto;
 }
 
-/* Header */
+
+/* Header 
+---------------------------------------------------------------- */
 .header {
   display: flex;
   align-items: center;
@@ -12,14 +14,196 @@
   border-top: 25px solid var(--blue);
 }
 
+/* Main 
+---------------------------------------------------------------- */
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.main p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.main .container {
+  padding: 0 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-/* Footer */
+
+/* Banner 
+---------------------------------------------------------------- */
+.bannerDesktop {
+  display: block;
+}
+.bannerMobile {
+  display: none;
+}
+
+
+/* Vídeo
+---------------------------------------------------------------- */
+.sectionVideo {
+  padding: 4rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+.sectionVideo iframe {
+  width: 100%;
+  height: 432px;
+}
+.sectionVideo .compreAgora {
+  margin-bottom: 3rem;
+}
+.sectionVideo .compreAgora h2 {
+  color: var(--background);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+.sectionVideo .btnComprar {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--white);
+  display: inline-block;
+  border-radius: 8px;
+  padding: .6rem 3rem;
+  background: var(--orange);
+  transition: background 0.2s;
+}
+
+
+/* Introdução
+---------------------------------------------------------------- */
+.scetionIntroducao {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  width: 100%;
+}
+.scetionIntroducao h3 {
+  color: var(--blue);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.scetionIntroducao p {
+  font-size: 1.2rem;
+}
+
+
+/* Módulos
+---------------------------------------------------------------- */
+.scetionModulos {
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--gray-line);
+}
+.itemModulo {
+  margin: 3rem 0;
+}
+.itemModulo h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.scetionModulos p {
+  color: var(--text);
+}
+
+
+/* O que vc aprenderá
+---------------------------------------------------------------- */
+.scetionTopicos {
+  padding: 4rem 0;
+  text-align: center;
+}
+.scetionTopicos h3 {
+  color: var(--background);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+.scetionTopicos li {
+  margin: .7rem 0;
+  font-size: 1.1rem;
+}
+
+
+/* Investimento
+---------------------------------------------------------------- */
+.scetionValor {
+  width: 100%;
+  padding: 3rem 0;
+  color: #fff;
+  text-align: center;
+  background: var(--orange);
+}
+.scetionValor h3 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.scetionValor span,
+.scetionValor strong {
+  display: block;
+}
+.scetionValor strong {
+  font-size: 3.6rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.scetionValor span {
+  font-size: 1rem;
+  margin: .3rem 0 1rem;
+}
+.scetionValor p {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+.scetionValor .btnComprar {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--orange);
+  display: inline-block;
+  border-radius: 8px;
+  padding: .6rem 3rem;
+  background: var(--white);
+  transition: background 0.2s;
+}
+.scetionValor .btnComprar:hover {
+  color: #fff;
+  background: var(--blue);
+}
+
+
+/* Sobre
+---------------------------------------------------------------- */
+.sectionAbout {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+.sectionAbout img {
+  margin-bottom: 1.5rem;
+  color: #49433B;
+}
+
+
+/* Footer 
+---------------------------------------------------------------- */
 .footer .rodape {
   padding: 1rem 1rem;
   background: var(--background);
@@ -42,14 +226,74 @@
 
 
 @media (max-width: 600px) {
-  .footer h2 {
+  /* Header */
+  .header {
+    padding: 1rem 0;
+  }
+
+  /* Video */
+  .sectionVideo {
+    padding: 3rem 0 1rem;
+  }
+  .sectionVideo br {
+    display: none;
+  }
+
+  /* Introducao */
+  .scetionIntroducao {
+    padding: 1rem 0;
+  }
+  .scetionIntroducao p {
+    font-size: 1rem;
+  }
+
+  /* Módulos */
+  .scetionModulos {
+    padding: 0;
+  }
+  .scetionModulos .itemModulo {
+    margin: 2rem 0;
+  }
+  .scetionModulos .itemModulo h4 {
     font-size: 1.6rem;
   }
 
+  /* Valor */
+  .scetionValor strong {
+    font-size: 3rem;
+  }
+  .scetionValor p {
+    font-size: 1.4rem;
+  }
+  .scetionValor .btnComprar {
+    padding: .6rem 1rem;
+  }
+
+  /* Topicos */
+  .scetionTopicos {
+    padding: 2rem 0;
+  }
+  .scetionTopicos h3 {
+    font-size: 1.8rem;
+  }
+
+
+
+  /* Banner */
+  .bannerDesktop {
+    display: none;
+  }
+  .bannerMobile {
+    display: block;
+  }
+
+  /* footer */
+  .footer h2 {
+    font-size: 1.6rem;
+  }
   .footer .formEbook {
     width: 100%;
   }
-
   .footer p {
     font-size: .95rem;
   }
