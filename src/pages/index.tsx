@@ -98,7 +98,7 @@ export default function Home() {
         <section className={styles.scetionValor}>
           <div className={styles.container}>
             <h3>Valor do investimento</h3>
-            <strong>R$ 240,00</strong>
+            <strong>R$ 249,00</strong>
             <span>(duzentos e quarenta reias)</span>
             <p>EM ATÉ 12X NO CARTÃO</p>
             <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar</a>
