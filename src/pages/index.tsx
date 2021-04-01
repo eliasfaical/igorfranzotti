@@ -35,8 +35,7 @@ export default function Home() {
                 Curso On-line “Introdução aos Fudamentos da Aquarela”.
               </p>
             </div>
-
-            <iframe src="https://www.youtube.com/embed/nILwg40Aby0?rel=0"></iframe>
+            <iframe src="https://www.youtube.com/embed/B9P0mzOUVjE?rel=0"></iframe>
           </div>
         </section>
 
