@@ -22,7 +22,7 @@ export default function Home() {
           <img src="/images/banner-online.jpg" alt="Banner Aquarelas - Igor Franzotti" className={styles.imgFluid} />
         </figure>
         <figure className={styles.bannerMobile}>
-          <img src="/images/banner-online-mobile.jpg" alt="Banner Aquarelas - Igor Franzotti" className={styles.imgFluid} />
+          <img src="/images/banner-online__mobile.jpg" alt="Banner Aquarelas - Igor Franzotti" className={styles.imgFluid} />
         </figure>
 
         <section className={styles.sectionVideo}>
@@ -99,7 +99,7 @@ export default function Home() {
           <div className={styles.container}>
             <h3>Valor do investimento</h3>
             <strong>R$ 249,00</strong>
-            <span>(duzentos e quarenta reias)</span>
+            <span>(duzentos e quarenta e nove)</span>
             <p>EM ATÉ 12X NO CARTÃO</p>
             <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar</a>
           </div>
