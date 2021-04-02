@@ -99,7 +99,8 @@ export default function Home() {
             <h3>Valor do investimento</h3>
             <strong>R$ 249,00</strong>
             <span>(duzentos e quarenta e nove)</span>
-            <p>EM ATÉ 12X NO CARTÃO</p>
+            <p>À VISTA OU EM ATÉ 12 VEZES NO CARTAO<sup>*</sup></p>
+            <small>*ACRESCIDO DE JUROS DE ACORDO COM A PARCELA</small>
             <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar</a>
           </div>
         </section>
