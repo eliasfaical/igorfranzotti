@@ -32,7 +32,7 @@ export default function Home() {
               <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Clique aqui" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Clique aqui</a>
               <p>
                 Você será redirecionado para a plataforma de venda do <br />
-                Curso On-line “Introdução aos Fudamentos da Aquarela”.
+                Curso On-line “Introdução aos Fundamentos da Aquarela”.
               </p>
             </div>
             <iframe src="https://www.youtube.com/embed/B9P0mzOUVjE?rel=0"></iframe>
@@ -99,7 +99,7 @@ export default function Home() {
             <h3>Valor do investimento</h3>
             <strong>R$ 249,00</strong>
             <span>(duzentos e quarenta e nove)</span>
-            <p>À VISTA OU EM ATÉ 12 VEZES NO CARTAO<sup>*</sup></p>
+            <p>À VISTA OU EM ATÉ 12 VEZES NO CARTÃO<sup>*</sup></p>
             <small>*ACRESCIDO DE JUROS DE ACORDO COM A PARCELA</small>
             <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar</a>
           </div>
