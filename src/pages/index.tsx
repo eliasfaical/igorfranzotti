@@ -86,14 +86,14 @@ export default function Home() {
           <div className={styles.container}>
             <h3>O QUE VOCÊ APRENDERÁ</h3>
             <ul>
-              <li>Você aprenderá os fundamentos necessários para criar suas próprias aquarelas;</li>
-              <li>Conhecerá os principais materiais (linhas estudante e profissional) para começar a pintar;</li>
-              <li>Entenderá sobre tipos de papéis, pigmentos e pincéis;</li>
-              <li>Teoria da cor por meio do disco cromático;</li>
-              <li>Conhecerá as propriedades da cor;</li>
-              <li>Aprenderá sobre mistura de cores;</li>
-              <li>Como fazer degradés;</li>
-              <li>Como pintar utilizando uma única cor (monocromática).</li>
+              <li>&bull; Você aprenderá os fundamentos necessários para criar suas próprias aquarelas;</li>
+              <li>&bull; Conhecerá os principais materiais (linhas estudante e profissional) para começar a pintar;</li>
+              <li>&bull; Entenderá sobre tipos de papéis, pigmentos e pincéis;</li>
+              <li>&bull; Teoria da cor por meio do disco cromático;</li>
+              <li>&bull; Conhecerá as propriedades da cor;</li>
+              <li>&bull; Aprenderá sobre mistura de cores;</li>
+              <li>&bull; Como fazer degradés;</li>
+              <li>&bull; Como pintar utilizando uma única cor (monocromática).</li>
             </ul>
           </div>
         </section>
