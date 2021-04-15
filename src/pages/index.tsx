@@ -28,7 +28,7 @@ export default function Home() {
         <section className={styles.sectionVideo}>
           <div className={styles.container}>
             <div className={styles.compreAgora}>
-              <h2>Compre agora</h2>
+              <h2>QUERO APRENDER AQUARELA</h2>
               <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Clique aqui" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Clique aqui</a>
               <p>
                 Você será redirecionado para a plataforma de venda do <br />
@@ -46,6 +46,10 @@ export default function Home() {
             <p>O conteúdo é dividido em 4 módulos, onde falaremos dos principais materiais, introdução à teoria das cores, técnicas básicas e exercícios práticos.</p>
             <p>Todas as aulas são gravadas e disponibilizadas na plataforma Hotmart para você assistir onde e quando quiser, pelo seu computador, tablet ou smartphone.</p>
             <p>Tudo de uma forma simples e prática e o melhor: disponível para sempre!</p>
+
+            <p>
+              <img src="/images/foto-aquarela.jpg" alt="Aquarela" className={styles.imgFluid} />
+            </p>
           </div>
         </section>
 
@@ -93,15 +97,75 @@ export default function Home() {
             </ul>
           </div>
         </section>
+
+        <section className={styles.scetionModulosItens}>
+          <div className={styles.container}>
+            <h3>OS 4 MÓDULOS DO CURSO</h3>
+
+            <div className={styles.row}>
+              <div className={styles.col}>
+                <strong>Módulo I</strong>
+                <ul className={styles.listModulos}>
+                  <li>Papéis;</li>
+                  <li>Pigmentos;</li>
+                  <li>Pincéis;</li>
+                  <li>Materiais de suporte.</li>
+                </ul>
+              </div>
+              <div className={styles.col}>
+                <strong>Módulo II</strong>
+                <ul className={styles.listModulos}>
+                  <li>Introdução à teoria das cores;</li>
+                  <li>Fundamentos da cor: saturação, temperatura, matiz e valor;</li>
+                  <li>Mistura de cores.</li>
+                </ul>
+              </div>
+              <div className={styles.col}>
+                <strong>Módulo III</strong>
+                <ul className={styles.listModulos}>
+                  <li>Técnicas báscias: seco no seco, seco no molhado, molhado no seco e molhado no molhado.</li>
+                </ul>
+              </div>
+              <div className={styles.col}>
+                <strong>Módulo IV</strong>
+                <ul className={styles.listModulos}>
+                  <li>4 exercícios: pintando passo-a-passo 4 aquarelas.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.scetionFotos}>
+          <figure>
+            <img src="/images/quadro-aquarela-1.jpg" alt="Quadro Aquarela" className={styles.imgFluid}/>
+          </figure>
+          <figure>
+            <img src="/images/quadro-aquarela-2.jpg" alt="Quadro Aquarela" className={styles.imgFluid}/>
+          </figure>
+          <figure>
+            <img src="/images/quadro-aquarela-3.jpg" alt="Quadro Aquarela" className={styles.imgFluid}/>
+          </figure>
+        </section>
         
         <section className={styles.scetionValor}>
           <div className={styles.container}>
-            <h3>Valor do investimento</h3>
-            <strong>R$ 249,00</strong>
-            <span>(duzentos e quarenta e nove)</span>
-            <p>À VISTA OU EM ATÉ 12 VEZES NO CARTÃO<sup>*</sup></p>
-            <small>*ACRESCIDO DE JUROS DE ACORDO COM A PARCELA</small>
-            <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar</a>
+            <div className={styles.col}>
+              <ul>
+                <li>√ Curso teórico e prático;</li>
+                <li>√ Estudo onde e quando quiser;</li>
+                <li>√ 14 aulas gravadas;</li>
+                <li>√ Você pintará suas prórpias aquarelas;</li>
+                <li>√ Acesso vitalício;</li>
+              </ul>
+            </div>
+            <div className={styles.col}>
+              <h3>Valor do investimento</h3>
+              <p>R$ 320,00</p>
+              <strong>R$ 3X DE 83,00</strong>
+              <span>SEM JUROS NO CARTÃO DE CRÉDITO</span>
+              <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar!</a>
+            </div>
           </div>
         </section>
 

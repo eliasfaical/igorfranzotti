@@ -102,7 +102,7 @@
 ---------------------------------------------------------------- */
 .scetionModulos {
   width: 100%;
-  padding: 4rem 0;
+  padding: 3rem 0;
   text-align: center;
   background-color: var(--gray-line);
 }
@@ -140,19 +140,97 @@
 }
 
 
-/* Investimento
+/* O que vc Módulos itens
+---------------------------------------------------------------- */
+.scetionModulosItens {
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #49433B;
+}
+.scetionModulosItens h3 {
+  color: #E8DEC4;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.scetionModulosItens .container {
+  max-width: 1200px;
+}
+.scetionModulosItens .row {
+  width: 100%;
+  margin: 4rem 0 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.scetionModulosItens .col {
+  flex: 1;
+  padding-right:1rem;
+  margin-right: 1rem;
+  border-right: 1px solid #E8DEC4;
+  min-height: 160px;
+}
+.scetionModulosItens .col:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+.scetionModulosItens .col strong {
+  display: block;
+  margin-bottom: 1rem;
+  color: #EA6206;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.scetionModulosItens .listModulos li {
+  margin-bottom: .5rem;
+  color: #fff;
+}
+
+
+/* O que vc Fotos
+---------------------------------------------------------------- */
+.scetionFotos {
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scetionFotos figure {
+  margin: .5rem;
+}
+
+  /* Investimento
 ---------------------------------------------------------------- */
 .scetionValor {
   width: 100%;
   padding: 3rem 0;
   color: #fff;
-  text-align: center;
+  text-align: left;
   background: var(--orange);
+}
+.scetionValor .container {
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.scetionValor .col {
+  margin: 0 1.5rem;
+}
+.scetionValor ul li {
+  margin-bottom: .5rem;
+  font-size: 1.4rem;
 }
 .scetionValor h3 {
   text-transform: uppercase;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
 }
 .scetionValor span,
 .scetionValor small,
@@ -160,9 +238,10 @@
   display: block;
 }
 .scetionValor strong {
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   line-height: 1;
   font-weight: 600;
+  margin: .5rem 0;
 }
 .scetionValor span {
   font-size: 1rem;
@@ -176,17 +255,29 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0;
+  padding: 0 .5rem;
   text-transform: uppercase;
-  color: #fff;
+  color: #8E3900;
+  position: relative;
+}
+.scetionValor p:after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background: #E8DEC4;
+  display: table;
+  position: absolute;
+  top: 48%;
+  left: -.1rem;
 }
 .scetionValor .btnComprar {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--orange);
   display: inline-block;
   border-radius: 8px;
-  padding: .6rem 3rem;
+  padding: .5rem 2rem;
   background: var(--white);
   transition: background 0.2s;
 }
@@ -265,11 +356,23 @@
   }
 
   /* Valor */
+  .scetionValor .container {
+    flex-direction: column;
+  }
   .scetionValor strong {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .scetionValor p {
     font-size: 1.4rem;
+  }
+  .scetionValor .col {
+    margin: 0;
+  }
+  .scetionValor ul {
+    margin-bottom: 2rem;
+  }
+  .scetionValor ul li {
+    font-size: 1.1rem;
   }
   .scetionValor .btnComprar {
     padding: .6rem 1rem;
@@ -283,7 +386,19 @@
     font-size: 1.8rem;
   }
 
-
+   /* Itens */
+  .scetionModulosItens .row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .scetionModulosItens .row .col {
+    border: 0;
+    padding: 0;
+    min-height: auto;
+    margin-top: 2rem;
+  }
 
   /* Banner */
   .bannerDesktop {
@@ -295,7 +410,7 @@
 
   /* footer */
   .footer h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .footer .formEbook {
     width: 100%;
