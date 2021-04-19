@@ -25,8 +25,14 @@ const Newsletter = () => {
                 return (
                   <p className={styles.msgSucesso}>
                     Inscrição realizada com sucesso!<br />
-                    Enviamos para seu e-mail o link para download do E-book.
-
+                    <a 
+                      href="https://igorfranzotti.com/images/ebook_introducao_aos_fundamentos_da_aquarela.pdf" 
+                      className={styles.button} 
+                      title="Download E-book" 
+                      target="_blank" rel="noopener noreferrer"
+                    >
+                      Aqui está o seu E-book!
+                    </a>
                   </p>
                 )
               case 'error':
