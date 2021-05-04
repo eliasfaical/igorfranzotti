@@ -285,6 +285,13 @@
   color: #fff;
   background: var(--blue);
 }
+.scetionValor .vantagens {
+  margin: 3rem auto 0;
+  max-width: 800px;
+  border-top: 1px solid rgba(255, 255, 255, 0.178);
+  padding-top: 2rem;
+  text-align: center;
+}
 
 
 /* Sobre

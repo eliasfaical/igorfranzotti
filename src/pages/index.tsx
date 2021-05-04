@@ -167,6 +167,14 @@ export default function Home() {
               <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar!</a>
             </div>
           </div>
+
+          <div className={styles.vantagens}>
+            <h3>Bônus para quem comprar hoje:</h3>
+            <ul>
+              <li>Lives exclusivas;</li>
+              <li>Grupo de Whatsapp com dicas e trocas de experiências</li>
+            </ul>
+          </div>
         </section>
 
         <section className={styles.sectionAbout}>
