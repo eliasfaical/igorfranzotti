@@ -161,7 +161,7 @@ export default function Home() {
             </div>
             <div className={styles.col}>
               <h3>Valor do investimento</h3>
-              <p>R$ 138,00</p>
+              <p>R$ 249,00</p>
               <strong>R$ 3X DE 46,00</strong>
               <span>OFERTA POR TEMPO LIMITADO</span>
               <span>Sem juros no cartão de crédito</span>
