@@ -162,7 +162,7 @@ export default function Home() {
             <div className={styles.col}>
               <h3>Valor do investimento</h3>
               <p>R$ 249,00</p>
-              <strong>R$ 3X DE 46,00</strong>
+              <strong>R$ 10X DE 13,80</strong>
               <span>OFERTA POR TEMPO LIMITADO</span>
               <span>Sem juros no cartão de crédito</span>
               <a href="https://pay.hotmart.com/K50418650H?checkoutMode=10" title="Quero comprar" target="_blank" rel="noopener noreferrer" className={styles.btnComprar}>Quero comprar!</a>
