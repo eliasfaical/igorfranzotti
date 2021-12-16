@@ -6,7 +6,7 @@ Landing para captação de lead
 
 ```bash
 npm run dev
-# or
+# orrr
 yarn dev
 ```
 
